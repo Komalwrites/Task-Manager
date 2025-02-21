@@ -9,7 +9,7 @@ const TaskListPage = () => {
     useEffect(() => {
         setReferesh(false)
         const getTask = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/task/get-all-task`)
+            const response = await fetch(`${https://task-manager-q0i2.onrender.com}/task/get-all-task`)
             const responseData = await response.json()
             setTasks(responseData)
         }
@@ -18,7 +18,7 @@ const TaskListPage = () => {
 
     const deleteTask = async (taskid) => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/task/delete-task/${taskid}`, {
+            const response = await fetch(`${https://task-manager-q0i2.onrender.com}/task/delete-task/${taskid}`, {
                 method: 'DELETE'
             })
             const responseData = await response.json()

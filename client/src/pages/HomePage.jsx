@@ -20,7 +20,7 @@ const HomePage = () => {
         e.preventDefault()
         try {
             const validatedData = taskSchema.parse(formData)
-            const response = await fetch(`${https://task-manager-q0i2.onrender.com}/task/create-task`,
+            const response = await fetch(`https://task-manager-q0i2.onrender.com/task/create-task`,
                 {
                     method: "POST",
                     headers: { 'Content-type': 'application/json' },

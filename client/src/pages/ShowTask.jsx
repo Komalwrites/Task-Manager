@@ -21,7 +21,7 @@ const ShowTask = () => {
 
     useEffect(() => {
         const getTask = async () => {
-            const response = await fetch(`${https://task-manager-q0i2.onrender.com}/task/show-task/${taskid}`)
+            const response = await fetch(`https://task-manager-q0i2.onrender.com/task/show-task/${taskid}`)
             const responseData = await response.json()
             setApiData(responseData)
             setFormData(responseData.taskData)
@@ -33,7 +33,7 @@ const ShowTask = () => {
         e.preventDefault()
         try {
             const validatedData = taskSchema.parse(formData)
-            const response = await fetch(`${https://task-manager-q0i2.onrender.com}/task/update-task/${taskid}`,
+            const response = await fetch(`https://task-manager-q0i2.onrender.com/task/update-task/${taskid}`,
                 {
                     method: "PUT",
                     headers: { 'Content-type': 'application/json' },
